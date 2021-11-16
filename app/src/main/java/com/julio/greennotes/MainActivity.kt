@@ -9,5 +9,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         // Os jacaré dominou o projeto kskk
         //Green notes
+        //oi equipe bonita
     }
 }
