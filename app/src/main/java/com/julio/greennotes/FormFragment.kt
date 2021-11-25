@@ -4,17 +4,13 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.inflate
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.fragment.app.findFragment
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.RecyclerView
 import com.julio.greennotes.service.Task
-import com.julio.greennotes.service.TaskAdapter
 import com.julio.greennotes.service.TaskCategory
-import kotlinx.android.synthetic.main.fragment_task_list.*
+import kotlinx.android.synthetic.main.fragment_form.view.*
 
 class FormFragment : Fragment() {
 
@@ -30,11 +26,38 @@ class FormFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val button = view.findViewById<Button>(R.id.btn_save)
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_oficial)
+        //val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_oficial)
+        //val cardView : CardView = view.findViewById(R.id.cardView_formTask)
 
         button.setOnClickListener {
-            val action = FormFragmentDirections.actionTest()
-            findNavController().navigate(action)
+            val name = view.plainText_task_title.text.toString()
+            val details = view.plainText_task_details.text.toString()
+            val responsible = view.plainText_responsible.text.toString()
+            val date = view.plainText_date.text.toString()
+            val status = view.plainText_progress.text.toString()
+
+            //val newTask = Task.createNewTaskWithView(view)
+            val newTask = Task(name, details, responsible, date, status)
+                val taskCategoryObj = TaskCategory("test")
+
+                if(taskCategoryObj.addTask(newTask)){
+                    val action = FormFragmentDirections.actionTest()
+                    findNavController().navigate(action)
+                }else{
+                    var campoVazio = ""
+                    if (name.isEmpty()) {
+                        campoVazio = "title"
+                    }else if (details.isEmpty()){
+                        campoVazio = "details"
+                    }else if (responsible.isEmpty()){
+                        campoVazio = "responsible"
+                    }else if (date.isEmpty()){
+                        campoVazio = "date"
+                    }else if (status.isEmpty()){
+                        campoVazio = "progress"
+                    }
+                    Toast.makeText(this.context, "Campo $campoVazio está vazio", Toast.LENGTH_LONG).show()
+                }
         }
     }
 

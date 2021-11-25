@@ -58,13 +58,13 @@
             app:layout_constraintTop_toBottomOf="@+id/plainText_task_details" />
 
         <EditText
-            android:id="@+id/planText_date"
+            android:id="@+id/plainText_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
             android:ems="10"
             android:hint="Data"
-            android:inputType="textPersonName"
+            android:inputType="date"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/plainText_responsible" />
@@ -79,7 +79,7 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/planText_date" />
+            app:layout_constraintTop_toBottomOf="@+id/plainText_date" />
 
         <Button
             android:id="@+id/btn_save"
