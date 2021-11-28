@@ -12,21 +12,43 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
-            android:text="NOVA TAREFA"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:background="#4F8901"
+            android:gravity="center|start"
+            android:lineSpacingExtra="8sp"
+            android:text="                   NOVA TAREFA"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/plainText_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/plaintext_bg_border"
+            android:ems="10"
+            android:hint="   Progresso"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plainText_date" />
 
         <EditText
             android:id="@+id/plainText_task_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="76dp"
+            android:background="@drawable/plaintext_bg_border"
             android:ems="10"
-            android:hint="Titulo Tarefa"
+            android:hint="   Titulo tarefa"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -37,11 +59,13 @@
             android:id="@+id/plainText_task_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/plaintext_bg_border"
             android:ems="10"
-            android:hint="Detalhes"
+            android:hint="   Detalhes"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/plainText_task_title" />
 
@@ -49,11 +73,13 @@
             android:id="@+id/plainText_responsible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/plaintext_bg_border"
             android:ems="10"
-            android:hint="Responsável"
+            android:hint="   Responsável"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/plainText_task_details" />
 
@@ -61,35 +87,59 @@
             android:id="@+id/plainText_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/plaintext_bg_border"
             android:ems="10"
-            android:hint="Data"
+            android:hapticFeedbackEnabled="true"
+            android:hint="   Data"
             android:inputType="date"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/plainText_responsible" />
 
-        <EditText
-            android:id="@+id/plainText_progress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:ems="10"
-            android:hint="Progresso"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/plainText_date" />
-
         <Button
             android:id="@+id/btn_save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:text="SALVAR"
+            android:layout_width="76dp"
+            android:layout_height="39dp"
+            android:backgroundTint="@color/cinzabtn"
+            android:hapticFeedbackEnabled="false"
+            android:text="Salvar"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            app:iconTint="#545454"
+            app:layout_constraintBottom_toTopOf="@+id/plainText_task_title"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/plainText_progress" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.025"
+            app:strokeColor="#FFFFFF" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="54dp"
+            android:layout_height="42dp"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/seta"
+            app:layout_constraintEnd_toStartOf="@+id/btn_save"
+            app:layout_constraintHorizontal_bias="0.073"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="132dp"
+            android:layout_height="120dp"
+            android:src="@drawable/jacare"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.057"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plainText_progress"
+            app:layout_constraintVertical_bias="0.853" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
 
