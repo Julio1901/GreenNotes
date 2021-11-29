@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.julio.greennotes.R
 
 
-class TaskAdapter (private val context : Context, private val taskList: List<Task>): RecyclerView.Adapter<TaskAdapter.MyViewHolder>(){
+class TaskAdapter (private val context : Context, private val taskOldList: List<TaskOld>): RecyclerView.Adapter<TaskAdapter.MyViewHolder>(){
 
     //02- Recebe uma view e cria um padrão de viewHolder com base nos campos contidos na view
     class MyViewHolder(private val view : View): RecyclerView.ViewHolder(view){
@@ -32,7 +32,7 @@ class TaskAdapter (private val context : Context, private val taskList: List<Tas
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val item = taskList[position]
+        val item = taskOldList[position]
         //04-Manipulando os atributos declarado do meu view holder setando propriedades do elemento da lista
         holder.nameTextView.text = item.name
         holder.detailTextView.text = item.details
@@ -43,6 +43,6 @@ class TaskAdapter (private val context : Context, private val taskList: List<Tas
     }
     //Retorna a quantidade de elementos para o viewHolder poder manipular de maneira eficaz quantas views irá
     //disponibilizar para nossa recycler view
-    override fun getItemCount() = taskList.size
+    override fun getItemCount() = taskOldList.size
 
 }

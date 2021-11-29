@@ -5,12 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
-import com.julio.greennotes.service.Task
-import com.julio.greennotes.service.TaskAdapter
-import com.julio.greennotes.service.TaskCategory
 
 
 class CardTaskFragment : Fragment() {

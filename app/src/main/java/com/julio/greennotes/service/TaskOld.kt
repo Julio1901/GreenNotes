@@ -1,14 +1,10 @@
 package com.julio.greennotes.service
 
-import android.view.View
-import androidx.cardview.widget.CardView
-import kotlinx.android.synthetic.main.fragment_card_task.view.*
-
 
 //TODO: Revisar classe e segurança da mesma
 //TODO: Transformar em um LiveDate
-class Task (var  name : String, var  details : String, var responsible : String, var date : String,
-            var status: String){
+class TaskOld (var  name : String, var  details : String, var responsible : String, var date : String,
+               var status: String){
 
 
 /*
@@ -34,14 +30,14 @@ TODO: Review it
 
 
     companion object {
-    fun hasSomethingEmpty(task: Task): Boolean {
+    fun hasSomethingEmpty(taskOld: TaskOld): Boolean {
         var hasSomethingEmpty = false
-        var name = task.name
-        var details = task.details
-        var responsible = task.responsible
+        var name = taskOld.name
+        var details = taskOld.details
+        var responsible = taskOld.responsible
         //Add here a validation to date format text
-        var date = task.date
-        var status = task.status
+        var date = taskOld.date
+        var status = taskOld.status
 
         val listOfAttributes = mutableListOf(name, details, responsible, date, status)
 

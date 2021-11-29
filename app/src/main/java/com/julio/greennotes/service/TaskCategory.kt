@@ -1,18 +1,13 @@
 package com.julio.greennotes.service
 
-import android.content.Context
 import android.util.Log
-import android.view.View
-import androidx.cardview.widget.CardView
-import com.julio.greennotes.R
-import kotlinx.android.synthetic.main.fragment_card_task.view.*
 
 class TaskCategory (private val nameCategory: String){
-    private lateinit var taskList : MutableList<Task>
+    private lateinit var taskOldList : MutableList<TaskOld>
 
     //TODO: Data validation
 
-    fun addTask(newTask : Task) : Boolean{
+    fun addTask(newTaskOld : TaskOld) : Boolean{
         //val cardTask = view.findViewById<CardView>(R.id.cardView_formTask)
 
         var hasSomethingEmpty : Boolean
@@ -24,18 +19,18 @@ class TaskCategory (private val nameCategory: String){
 //            cardTask.editText_status.text.toString()
 //            )
 
-        if(Task.hasSomethingEmpty(newTask)){
+        if(TaskOld.hasSomethingEmpty(newTaskOld)){
             //TODO: EXIBIR MENSAGEM DE ERRO
             Log.d("logValidation", "campo vazio encontrado")
             return false
         }else{
             Log.d("logValidation", "task adicionada com sucesso")
             return true
-            taskList.add(newTask)
+            taskOldList.add(newTaskOld)
         }
 
     }
 
-    fun returnTaskList() = taskList
+    fun returnTaskList() = taskOldList
 
 }

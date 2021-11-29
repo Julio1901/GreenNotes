@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.julio.greennotes.service.Task
+import com.julio.greennotes.service.TaskOld
 import com.julio.greennotes.service.TaskAdapter
 
 
@@ -28,11 +28,11 @@ class TaskListFragment : Fragment() {
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_oficial)
 
         //CENÁRIO DE TESTE
-        val task1 = Task("Teste1", "Teste1", "Test1", "Test1", "Test1")
-        val task2 = Task("Teste2", "Teste2", "Test2", "Test2", "Test2")
-        val task3 = Task("Teste3", "Teste3", "Test3", "Test3", "Test3")
-        val task4 = Task("Teste4", "Teste4", "Test4", "Test4", "Test4")
-        val task5 = Task("Teste5", "Teste5", "Test5", "Test5", "Test5")
+        val task1 = TaskOld("Teste1", "Teste1", "Test1", "Test1", "Test1")
+        val task2 = TaskOld("Teste2", "Teste2", "Test2", "Test2", "Test2")
+        val task3 = TaskOld("Teste3", "Teste3", "Test3", "Test3", "Test3")
+        val task4 = TaskOld("Teste4", "Teste4", "Test4", "Test4", "Test4")
+        val task5 = TaskOld("Teste5", "Teste5", "Test5", "Test5", "Test5")
 
 
 
