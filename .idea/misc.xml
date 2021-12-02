@@ -5,9 +5,6 @@
       <map>
         <entry key="..\:/Codigos/Green Notes/GreenNotes/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/activity_main.xml" value="0.536" />
-        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_card_task.xml" value="0.264" />
-        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_form.xml" value="0.264" />
-        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_task_view.xml" value="0.264" />
         <entry key="..\:/Users/usuario/Desktop/GreenNotes/app/src/main/res/drawable/plaintext_bg_border.xml" value="0.21770833333333334" />
         <entry key="..\:/Users/usuario/Desktop/GreenNotes/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/usuario/Desktop/GreenNotes/app/src/main/res/layout/card_test.xml" value="0.33" />
@@ -18,6 +15,7 @@
         <entry key="..\:/Users/usuario/Desktop/gitRepositories/GreenNotes/app/src/main/res/layout/fragment_card_task.xml" value="0.25" />
         <entry key="..\:/Users/usuario/Desktop/gitRepositories/GreenNotes/app/src/main/res/layout/fragment_form.xml" value="0.38883349950149554" />
         <entry key="..\:/Users/usuario/Desktop/gitRepositories/GreenNotes/app/src/main/res/layout/fragment_task_list.xml" value="0.33" />
+        <entry key="..\:/Users/usuario/Desktop/gitRepositories/GreenNotes/app/src/main/res/layout/fragment_task_view.xml" value="0.25" />
         <entry key="..\:/Users/usuario/Desktop/gitRepositories/GreenNotes/app/src/main/res/layout/fragment_test_recycle.xml" value="0.33" />
       </map>
     </option>

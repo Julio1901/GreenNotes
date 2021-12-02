@@ -5,6 +5,8 @@ import retrofit2.Response
 import retrofit2.http.*
 
 interface TaskService {
+    //TODO get
+
 
     @POST("api/todo")
     suspend fun addTask(@Body task: Task): Response<Task>

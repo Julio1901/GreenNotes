@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_greennotes"
-    app:startDestination="@id/formFragment">
+    app:startDestination="@id/taskListFragment">
 
     <fragment
         android:id="@+id/formFragment"
@@ -13,6 +13,29 @@
         <action
             android:id="@+id/action_test"
             app:destination="@id/taskListFragment" />
+        <argument
+            android:name="taskTitle"
+            app:argType="string"
+            android:defaultValue="defaultEmpty" />
+        <argument
+            android:name="taskDetail"
+            app:argType="string"
+            android:defaultValue="defaultEmpty" />
+        <argument
+            android:name="taskResponsible"
+            app:argType="string"
+            android:defaultValue="defaultEmpty" />
+        <argument
+            android:name="taskDate"
+            app:argType="string"
+            android:defaultValue="defaultEmpty" />
+        <argument
+            android:name="taskProgress"
+            app:argType="string"
+            android:defaultValue="defaultEmpty" />
+        <argument
+            android:name="fragmentTitle"
+            android:defaultValue="EDITAR TAREFA" />
     </fragment>
     <fragment
         android:id="@+id/taskListFragment"

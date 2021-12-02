@@ -8,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.julio.greennotes.model.Task
 import com.julio.greennotes.service.TaskOld
@@ -30,6 +32,9 @@ class FormFragment : Fragment() {
 //    private val taskViewModel : TaskViewModel by viewModel{
 //        parametersOf(TaskRepository())
  //  }
+
+
+    private val args : FormFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -52,6 +57,11 @@ class FormFragment : Fragment() {
         val plainTextResponsible = view.findViewById<EditText>(R.id.plainText_responsible)
         val plainTextDate = view.findViewById<EditText>(R.id.plainText_date)
         val plainTextProgress = view.findViewById<EditText>(R.id.plainText_progress)
+
+        //TODO: DELETAR ISSO É APENAS UM TEST
+        val taskToDelet = Task(17, "tedt dao", "test dao", "test dao", "2021-12-24 10:12:00", "test dao ")
+        taskViewModel.deletTaskLocal(taskToDelet)
+
 
         //TODO: Refactor to open with one click
         //Calendary
@@ -79,6 +89,24 @@ class FormFragment : Fragment() {
 
                 }
         }
+
+
+        //TODO: POPULANDO CAMPOS CASO TENHA SIDO ABERTO POR ACTION DO BUTON DE EDIT
+
+        if(args.taskTitle != "defaultEmpty"){
+            //Task Title
+            val formTitle = view.findViewById<TextView>(R.id.textView_form_title)
+            formTitle.setText(args.taskTitle)
+
+            plainTextTitle.setText(args.taskTitle)
+            plainTextDetails.setText(args.taskDetail)
+            plainTextResponsible.setText(args.taskResponsible)
+            plainTextDate.setText(args.taskDate)
+            plainTextProgress.setText(args.taskProgress)
+        }
+
+
+
 
         button.setOnClickListener {
             val title = plainTextTitle.text.toString()

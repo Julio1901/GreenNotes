@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.julio.greennotes.R
+import com.julio.greennotes.model.Task
 
 
-class TaskAdapter (private val context : Context, private val taskOldList: List<TaskOld>): RecyclerView.Adapter<TaskAdapter.MyViewHolder>(){
+class TaskAdapter (private val context : Context, private val taskList: List<Task>): RecyclerView.Adapter<TaskAdapter.MyViewHolder>(){
 
     //02- Recebe uma view e cria um padrão de viewHolder com base nos campos contidos na view
     class MyViewHolder(private val view : View): RecyclerView.ViewHolder(view){
@@ -19,9 +20,6 @@ class TaskAdapter (private val context : Context, private val taskOldList: List<
         val responsibleTextView : TextView = view.findViewById(R.id.editText_responsible)
         val dateTextView : TextView = view.findViewById(R.id.editText_date)
         val statusTextView : TextView = view.findViewById(R.id.editText_status)
-
-
-
     }
 
     //TODO:Substituir pelo cardView
@@ -32,17 +30,15 @@ class TaskAdapter (private val context : Context, private val taskOldList: List<
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val item = taskOldList[position]
+        val item = taskList[position]
         //04-Manipulando os atributos declarado do meu view holder setando propriedades do elemento da lista
         holder.nameTextView.text = item.name
-        holder.detailTextView.text = item.details
-        holder.responsibleTextView.text = item.responsible
-        holder.dateTextView.text = item.date
+        holder.detailTextView.text = item.description
+        holder.responsibleTextView.text = item.assignetTo
+        holder.dateTextView.text = item.dueDate
         holder.statusTextView.text = item.status
-
     }
     //Retorna a quantidade de elementos para o viewHolder poder manipular de maneira eficaz quantas views irá
     //disponibilizar para nossa recycler view
-    override fun getItemCount() = taskOldList.size
-
+    override fun getItemCount() = taskList.size
 }

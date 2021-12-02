@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView_form_title"
             android:layout_width="0dp"
             android:layout_height="41dp"
             android:background="#4F8901"
@@ -55,7 +55,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_form_title" />
 
         <EditText
             android:id="@+id/plainText_task_details"
@@ -110,7 +110,7 @@
             android:textAllCaps="false"
             android:textSize="13sp"
             app:iconTint="#545454"
-            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_form_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.85"
             app:layout_constraintStart_toStartOf="parent"
@@ -127,7 +127,7 @@
             app:layout_constraintBottom_toTopOf="@+id/plainText_task_title"
             app:layout_constraintEnd_toStartOf="@+id/btn_save"
             app:layout_constraintHorizontal_bias="0.069"
-            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView_form_title"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
