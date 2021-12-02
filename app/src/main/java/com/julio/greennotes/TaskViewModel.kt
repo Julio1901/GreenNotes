@@ -8,10 +8,24 @@ import kotlinx.coroutines.launch
 
 class TaskViewModel (private val taskRepository: TaskRepository) : ViewModel(){
 
+
+    //aqui fazedos as funções inserindo no remoto e no local
     fun addTask(newTask : Task){
         viewModelScope.launch {
             taskRepository.addTask(newTask)
         }
     }
 
+
+    fun addTaskInDb(newTask: Task){
+        viewModelScope.launch {
+            taskRepository.addTaskInDb(newTask)
+        }
+    }
+
+    fun deletTaskRemote(task: Task){
+        viewModelScope.launch {
+            taskRepository.deletTaskRemote(task.id)
+        }
+    }
 }

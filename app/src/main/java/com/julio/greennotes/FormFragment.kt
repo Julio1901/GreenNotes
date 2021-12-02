@@ -16,6 +16,7 @@ import com.julio.greennotes.service.TaskOld
 import com.julio.greennotes.service.TaskCategory
 import kotlinx.android.synthetic.main.fragment_form.view.*
 import com.julio.greennotes.repository.TaskRepository
+import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 import java.time.Instant
@@ -25,10 +26,10 @@ import java.util.*
 
 class FormFragment : Fragment() {
 
-
-    private val taskViewModel : TaskViewModel by viewModel{
-        parametersOf(TaskRepository())
-    }
+//
+//    private val taskViewModel : TaskViewModel by viewModel{
+//        parametersOf(TaskRepository())
+ //  }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,6 +41,10 @@ class FormFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+         val taskViewModel : TaskViewModel by viewModel{
+            parametersOf(TaskRepository(view.context))
+        }
 
         val button = view.findViewById<Button>(R.id.btn_save)
         val plainTextTitle = view.findViewById<EditText>(R.id.plainText_task_title)
@@ -82,11 +87,18 @@ class FormFragment : Fragment() {
             val formatedData = plainTextDate.text.toString()
             val progress = plainTextProgress.text.toString()
 
+
             //Validate fields
             if(!validateFields(title, details, responsible,formatedData,progress)){
                 //TODO: Refactor this to generate auto id
-                val newTask = Task(15,title,details,responsible,formatedData,progress)
+                val newTask = Task(0,title,details,responsible,formatedData,progress)
+
                 taskViewModel.addTask(newTask)
+                taskViewModel.addTaskInDb(newTask)
+
+                //mock task
+                val fakeTask = Task(3,title,details,responsible,formatedData,progress)
+                taskViewModel.deletTaskRemote(fakeTask)
             }
         }
     }
