@@ -28,4 +28,10 @@ class TaskViewModel (private val taskRepository: TaskRepository) : ViewModel(){
             taskRepository.deletTaskRemote(task.id)
         }
     }
+
+    fun updateRemoteTask(task: Task){
+        viewModelScope.launch {
+            taskRepository.updateRemoteTask(task)
+        }
+    }
 }

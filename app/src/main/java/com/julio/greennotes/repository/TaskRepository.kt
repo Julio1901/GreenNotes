@@ -25,4 +25,8 @@ class TaskRepository(context: Context) {
         return RetrofitInstance.api.deletTaskById(taskId)
     }
 
+    suspend fun updateRemoteTask(task: Task) : Response<Task>{
+        return RetrofitInstance.api.updateTask(task)
+    }
+
 }

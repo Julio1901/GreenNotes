@@ -98,7 +98,7 @@ class FormFragment : Fragment() {
 
                 //mock task
                 val fakeTask = Task(3,title,details,responsible,formatedData,progress)
-                taskViewModel.deletTaskRemote(fakeTask)
+                //taskViewModel.deletTaskRemote(fakeTask)
             }
         }
     }

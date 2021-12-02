@@ -19,4 +19,13 @@
         android:name="com.julio.greennotes.TaskListFragment"
         android:label="fragment_task_list"
         tools:layout="@layout/fragment_task_list" />
+    <fragment
+        android:id="@+id/taskViewFragment"
+        android:name="com.julio.greennotes.TaskViewFragment"
+        android:label="fragment_task_view"
+        tools:layout="@layout/fragment_task_view" >
+        <action
+            android:id="@+id/action_taksView_to_editTask"
+            app:destination="@id/formFragment" />
+    </fragment>
 </navigation>

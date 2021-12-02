@@ -2,10 +2,7 @@ package com.julio.greennotes.api
 
 import com.julio.greennotes.model.Task
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.DELETE
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface TaskService {
 
@@ -18,4 +15,8 @@ interface TaskService {
         @Path("task") id : Int
     ): Response<Task>
 
+    @PUT("api/todo")
+    suspend fun updateTask(
+        @Body task: Task
+    ): Response<Task>
 }
