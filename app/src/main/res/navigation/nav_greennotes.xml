@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_greennotes"
-    app:startDestination="@id/taskListFragment">
+    app:startDestination="@id/greenNotes">
 
     <fragment
         android:id="@+id/formFragment"
@@ -51,4 +51,27 @@
             android:id="@+id/action_taksView_to_editTask"
             app:destination="@id/formFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/greenNotes"
+        android:name="com.julio.greennotes.GreenNotes"
+        android:label="fragment_green_notes"
+        tools:layout="@layout/fragment_green_notes" >
+        <action
+            android:id="@+id/action_greenNotes_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.julio.greennotes.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.julio.greennotes.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
 </navigation>

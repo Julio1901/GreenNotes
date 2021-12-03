@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterFragment">
+
+    <ImageView
+        android:id="@+id/crocodile_page_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/jacara_pirata"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/type_email_btn_pg_8"
+        android:layout_width="270dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="224dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerInside"
+        android:scaleX="1"
+        android:src="@drawable/button_page_8"
+        app:layout_constraintBottom_toTopOf="@+id/type_password_pg_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/go_back_page_8"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btn_enter_pg_8"
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/entrar_pag8"
+        app:layout_constraintBottom_toBottomOf="@+id/crocodile_page_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.703" />
+
+    <ImageView
+        android:id="@+id/type_password_pg_8"
+        android:layout_width="270dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="72dp"
+        android:backgroundTint="#00FFFFFF"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:src="@drawable/button_page_8"
+        app:layout_constraintBottom_toTopOf="@+id/btn_enter_pg_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/type_email_plain_pg_8"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="DIGITE SEU EMAIL"
+        android:inputType="textPersonName|textEmailSubject"
+        app:layout_constraintBottom_toBottomOf="@+id/type_email_btn_pg_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/type_email_btn_pg_8" />
+
+    <EditText
+        android:id="@+id/type_plain_pg_8"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="DIGITE A SENHA"
+        android:inputType="textPersonName|numberPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/type_password_pg_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_email_btn_pg_8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
