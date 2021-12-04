@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_greennotes"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/taskListFragment">
 
     <fragment
         android:id="@+id/formFragment"
@@ -101,4 +101,13 @@
         android:name="com.julio.greennotes.AjudaEFeedbackFragment"
         android:label="fragment_ajuda_e_feedback"
         tools:layout="@layout/fragment_ajuda_e_feedback" />
+    <fragment
+        android:id="@+id/homeViewFragment"
+        android:name="com.julio.greennotes.HomeViewFragment"
+        android:label="fragment_home_view"
+        tools:layout="@layout/fragment_home_view" >
+        <action
+            android:id="@+id/action_homeViewFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

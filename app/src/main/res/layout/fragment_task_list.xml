@@ -7,10 +7,93 @@
     android:layout_height="match_parent"
     tools:context=".TaskListFragment">
 
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="376dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="136dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitXY"
+        android:src="@drawable/barra_ods_menu"
+        app:layout_constraintBottom_toTopOf="@+id/barra_inferior_pg_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.359" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="244dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/hammersmith_one"
+        android:gravity="center"
+        android:text="Salve o Mundo"
+        android:textColor="@color/verdeapp"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/barra_inferior_pg_"
+        android:layout_width="411dp"
+        android:layout_height="124dp"
+        android:background="@color/verdeapp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/profile_btn_pg_"
+        android:layout_width="63dp"
+        android:layout_height="55dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_perfil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/add_task_btn_pg_"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="@+id/barra_inferior_pg_"
+        app:layout_constraintTop_toTopOf="@+id/barra_inferior_pg_"
+        app:layout_constraintVertical_bias="0.521" />
+
+    <ImageButton
+        android:id="@+id/calendar_btn_pg_"
+        android:layout_width="63dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="32dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_calendar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/barra_inferior_pg_"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toEndOf="@+id/add_task_btn_pg_"
+        app:layout_constraintTop_toTopOf="@+id/barra_inferior_pg_"
+        app:layout_constraintVertical_bias="0.972" />
+
+    <ImageButton
+        android:id="@+id/add_task_btn_pg_"
+        android:layout_width="73dp"
+        android:layout_height="72dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/barra_inferior_pg_"
+        app:layout_constraintStart_toStartOf="@+id/barra_inferior_pg_"
+        app:layout_constraintTop_toTopOf="@+id/barra_inferior_pg_"
+        app:layout_constraintVertical_bias="0.365" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_oficial"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="410dp"
+        android:layout_height="287dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
@@ -20,9 +103,11 @@
         app:layoutManager="LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.721">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
