@@ -31,20 +31,22 @@ class TaskViewFragment : Fragment() {
         val fakeTask = Task(1, "fake edit","fake edit","fake edit","2021-12-01 10:10:10",
             "fake edit")
 
-        editTaskButton.setOnClickListener {
 
-            val action = TaskViewFragmentDirections.actionTaksViewToEditTask(
-                fakeTask.name,
-                fakeTask.description,
-                fakeTask.assignetTo,
-                fakeTask.dueDate,
-                fakeTask.status
-            )
-
-            findNavController().navigate(action)
-
-
-        }
+//           Comentado por Henrique por conta de erro inesperado!
+//        editTaskButton.setOnClickListener {
+//
+//            val action = TaskViewFragmentDirections.actionTaksViewToEditTask(
+//                fakeTask.name,
+//                fakeTask.description,
+//                fakeTask.assignetTo,
+//                fakeTask.dueDate,
+//                fakeTask.status
+//            )
+//
+//            findNavController().navigate(action)
+//
+//
+//        }
 
 
 

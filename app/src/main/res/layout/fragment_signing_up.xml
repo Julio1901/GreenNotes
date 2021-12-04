@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SigningUpFragment">
+
+    <CheckBox
+        android:id="@+id/check_terms"
+        android:layout_width="323dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/open_sans_light"
+        android:text="Li e concordo com os termos e políticas"
+        android:textColor="#000000"
+        android:textColorLink="@color/verdeapp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_senha_conf_pg_4" />
+
+    <ImageView
+        android:id="@+id/bg_email_pg_4"
+        android:layout_width="327dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/bg_plain_text_pg_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_nome_pg_4" />
+
+    <ImageView
+        android:id="@+id/bg_senha_pg_4"
+        android:layout_width="327dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/bg_plain_text_pg_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_email_pg_4" />
+
+    <ImageView
+        android:id="@+id/bg_senha_conf_pg_4"
+        android:layout_width="327dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/bg_plain_text_pg_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_senha_pg_4" />
+
+    <ImageView
+        android:id="@+id/bg_nome_pg_4"
+        android:layout_width="327dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/bg_plain_text_pg_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadastro_text_view_pg_4" />
+
+    <Button
+        android:id="@+id/btn_log_pg_4"
+        android:layout_width="276dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/hammersmith_one"
+        android:text="Vire um Jacaré"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_terms"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="#45EC4D" />
+
+    <EditText
+        android:id="@+id/nome_plain_pg_4"
+        android:layout_width="304dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:hint="Digite seu nome"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_nome_pg_4"
+        app:layout_constraintEnd_toEndOf="@+id/bg_nome_pg_4"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/bg_nome_pg_4" />
+
+    <EditText
+        android:id="@+id/email_plain_pg_4"
+        android:layout_width="295dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Digite seu e-mail"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_email_pg_4"
+        app:layout_constraintEnd_toEndOf="@+id/bg_email_pg_4"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@+id/bg_email_pg_4"
+        app:layout_constraintTop_toTopOf="@+id/bg_email_pg_4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/senha_plain_pg_4"
+        android:layout_width="298dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:hint="Digite uma senha"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_senha_pg_4"
+        app:layout_constraintEnd_toEndOf="@+id/bg_senha_pg_4"
+        app:layout_constraintStart_toStartOf="@+id/bg_senha_pg_4"
+        app:layout_constraintTop_toTopOf="@+id/bg_senha_pg_4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/senha_conf_pg_4"
+        android:layout_width="298dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:hint="Confirmar a senha"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_senha_conf_pg_4"
+        app:layout_constraintEnd_toEndOf="@+id/bg_senha_conf_pg_4"
+        app:layout_constraintHorizontal_bias="0.379"
+        app:layout_constraintStart_toStartOf="@+id/bg_senha_conf_pg_4"
+        app:layout_constraintTop_toTopOf="@+id/bg_senha_conf_pg_4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/cadastro_text_view_pg_4"
+        android:layout_width="413dp"
+        android:layout_height="50dp"
+        android:background="@color/verdeapp"
+        android:fontFamily="@font/hammersmith_one"
+        android:gravity="center"
+        android:text="CADASTRO"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_voltar_pg_4"
+        android:layout_width="50dp"
+        android:layout_height="49dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/seta_branca_pg_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

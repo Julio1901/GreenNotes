@@ -6,98 +6,102 @@
     android:layout_height="match_parent"
     tools:context=".RegisterFragment">
 
-    <ImageView
-        android:id="@+id/crocodile_page_8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/jacara_pirata"
+    <Button
+        android:id="@+id/btn_log_pg3"
+        android:layout_width="209dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="252dp"
+        android:fontFamily="@font/hammersmith_one"
+        android:text="Entrar"
+        android:textColor="#FEFDFD"
+        android:textSize="20dp"
+        app:iconTint="@color/verdeapp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:rippleColor="#C9E3A6" />
 
     <ImageView
-        android:id="@+id/type_email_btn_pg_8"
-        android:layout_width="270dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="224dp"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="centerInside"
-        android:scaleX="1"
-        android:src="@drawable/button_page_8"
-        app:layout_constraintBottom_toTopOf="@+id/type_password_pg_8"
+        android:id="@+id/btn_password_pg_3"
+        android:layout_width="209dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="68dp"
+        android:src="@drawable/botao_cinza_form_pg_3"
+        app:layout_constraintBottom_toTopOf="@+id/btn_log_pg3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/go_back_page_8"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="fitCenter"
-        android:src="@drawable/back_btn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageButton
-        android:id="@+id/btn_enter_pg_8"
-        android:layout_width="240dp"
-        android:layout_height="80dp"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="fitCenter"
-        android:src="@drawable/entrar_pag8"
-        app:layout_constraintBottom_toBottomOf="@+id/crocodile_page_8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.703" />
-
-    <ImageView
-        android:id="@+id/type_password_pg_8"
-        android:layout_width="270dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="72dp"
-        android:backgroundTint="#00FFFFFF"
-        android:cropToPadding="false"
-        android:scaleType="fitCenter"
-        android:src="@drawable/button_page_8"
-        app:layout_constraintBottom_toTopOf="@+id/btn_enter_pg_8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/type_email_plain_pg_8"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="DIGITE SEU EMAIL"
-        android:inputType="textPersonName|textEmailSubject"
-        app:layout_constraintBottom_toBottomOf="@+id/type_email_btn_pg_8"
+    <ImageView
+        android:id="@+id/btn_nsme_pg_3"
+        android:layout_width="209dp"
+        android:layout_height="49dp"
+        android:src="@drawable/botao_cinza_form_pg_3"
+        app:layout_constraintBottom_toTopOf="@+id/btn_password_pg_3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/type_email_btn_pg_8" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93" />
 
     <EditText
-        android:id="@+id/type_plain_pg_8"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/nome_plain_pg_3"
+        android:layout_width="192dp"
+        android:layout_height="38dp"
         android:ems="10"
-        android:hint="DIGITE A SENHA"
-        android:inputType="textPersonName|numberPassword"
-        app:layout_constraintBottom_toBottomOf="@+id/type_password_pg_8"
+        android:hint="Digite seu nome"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_nsme_pg_3"
+        app:layout_constraintEnd_toEndOf="@+id/btn_nsme_pg_3"
+        app:layout_constraintStart_toStartOf="@+id/btn_nsme_pg_3"
+        app:layout_constraintTop_toTopOf="@+id/btn_nsme_pg_3" />
+
+    <EditText
+        android:id="@+id/password_plain_pg_3"
+        android:layout_width="192dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:hint="Digite sua senha"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_password_pg_3"
+        app:layout_constraintEnd_toEndOf="@+id/btn_password_pg_3"
+        app:layout_constraintStart_toStartOf="@+id/btn_password_pg_3"
+        app:layout_constraintTop_toTopOf="@+id/btn_password_pg_3" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="114dp"
+        android:layout_height="114dp"
+        android:src="@drawable/jacare_2_pg_3_login"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/type_email_btn_pg_8" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.928" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:src="@drawable/jacare_1_pg_3_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.706"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.294" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="60dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/seta_verde"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,15 +7,38 @@
     tools:context=".GreenNotes">
 
     <ImageView
-        android:id="@+id/loading_image_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/c_pia_de_projeto_integrador_1_2__1_"
+        android:id="@+id/notas_view_pg_1"
+        android:layout_width="274dp"
+        android:layout_height="54dp"
+        android:src="@drawable/frase_pagina_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="ImageContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/jacare_view_pg_1"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <ImageView
+        android:id="@+id/green_notes_img_pg_1"
+        android:layout_width="342dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="88dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/greennotes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/jacare_view_pg_1"
+        android:layout_width="252dp"
+        android:layout_height="276dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/jacare_pagina_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/green_notes_img_pg_1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

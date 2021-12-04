@@ -108,6 +108,7 @@
             android:hapticFeedbackEnabled="false"
             android:text="Salvar"
             android:textAllCaps="false"
+            android:textColor="#FFFFFF"
             android:textSize="13sp"
             app:iconTint="#545454"
             app:layout_constraintBottom_toBottomOf="@+id/textView_form_title"
@@ -115,6 +116,7 @@
             app:layout_constraintHorizontal_bias="0.85"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="#D9D9D9"
             app:strokeColor="#FFFFFF" />
 
         <ImageButton

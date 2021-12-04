@@ -6,65 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".LoginFragment">
 
-    <ImageButton
-        android:id="@+id/login_btn"
-        android:layout_width="314dp"
-        android:layout_height="75dp"
-        android:layout_marginBottom="4dp"
-        android:adjustViewBounds="true"
-        android:backgroundTint="#00FFFFFF"
-        android:cropToPadding="true"
+    <ImageView
+        android:id="@+id/jacare_view_pg_6"
+        android:layout_width="164dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="152dp"
         android:scaleType="fitCenter"
-        android:scaleX="1"
-        android:src="@drawable/login_pg_8"
-        app:layout_constraintBottom_toTopOf="@+id/register_btn"
+        android:src="@drawable/jacare"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login_pg_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/jacare_cadastro" />
 
-    <ImageButton
-        android:id="@+id/register_btn"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:backgroundTint="#00FFFFFF"
-        android:cropToPadding="true"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/cadastro_pg6"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/btn_login_pg_1"
+        android:layout_width="276dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="484dp"
+        android:fontFamily="@font/hammersmith_one"
+        android:text="Fazer Login"
+        android:textColor="#F9F7F7"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:rippleColor="#C9E3A6" />
+
+    <Button
+        android:id="@+id/btn_register_pg_1"
+        android:layout_width="276dp"
+        android:layout_height="54dp"
+        android:fontFamily="@font/hammersmith_one"
+        android:text="Me cadastrar"
+        android:textColor="#F9F7F7"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login_pg_1"
+        app:layout_constraintVertical_bias="0.106"
+        app:rippleColor="#C9E3A6" />
 
     <ImageView
-        android:id="@+id/corcodile_pg_6"
-        android:layout_width="124dp"
-        android:layout_height="220dp"
-        android:src="@drawable/jacare"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/imageView"
+        android:layout_width="212dp"
+        android:layout_height="151dp"
+        android:src="@drawable/frase_pg_2"
+        app:layout_constraintBottom_toTopOf="@+id/jacare_view_pg_6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintHorizontal_bias="0.824"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.536" />
-
-    <ImageView
-        android:id="@+id/fala_pg_6"
-        android:layout_width="180dp"
-        android:layout_height="120dp"
-        android:src="@drawable/words"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.412"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.332" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

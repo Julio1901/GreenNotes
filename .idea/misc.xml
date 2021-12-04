@@ -3,13 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Codigos/Green Notes/GreenNotes/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3880208333333333" />
         <entry key="..\:/Codigos/Green Notes/GreenNotes/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Codigos/Green Notes/GreenNotes/app/src/main/res/layout/fragment_form.xml" value="0.5" />
-        <entry key="..\:/Codigos/Green Notes/GreenNotes/app/src/main/res/layout/fragment_green_notes.xml" value="0.33" />
-        <entry key="..\:/Codigos/Green Notes/GreenNotes/app/src/main/res/layout/fragment_login.xml" value="0.33" />
-        <entry key="..\:/Codigos/Green Notes/GreenNotes/app/src/main/res/layout/fragment_register.xml" value="0.3081664098613251" />
-        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/activity_main.xml" value="0.536" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14583333333333334" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/activity_main.xml" value="0.22612085769980506" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/card_test.xml" value="0.1" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_ajuda_e_feedback.xml" value="0.2" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_card_task.xml" value="0.264" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_form.xml" value="0.368375325803649" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_green_notes.xml" value="0.4" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_home.xml" value="0.176" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_login.xml" value="0.4" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_profile.xml" value="0.152" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_profille.xml" value="0.264" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_register.xml" value="0.4" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_signing_up.xml" value="0.4" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_task_list.xml" value="0.18614130434782608" />
+        <entry key="..\:/Users/coelh/AndroidStudioProjects/GreenNotes/app/src/main/res/layout/fragment_task_view.xml" value="0.264" />
         <entry key="..\:/Users/usuario/Desktop/GreenNotes/app/src/main/res/drawable/plaintext_bg_border.xml" value="0.21770833333333334" />
         <entry key="..\:/Users/usuario/Desktop/GreenNotes/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/usuario/Desktop/GreenNotes/app/src/main/res/layout/card_test.xml" value="0.33" />
@@ -20,7 +29,6 @@
         <entry key="..\:/Users/usuario/Desktop/gitRepositories/GreenNotes/app/src/main/res/layout/fragment_card_task.xml" value="0.25" />
         <entry key="..\:/Users/usuario/Desktop/gitRepositories/GreenNotes/app/src/main/res/layout/fragment_form.xml" value="0.38883349950149554" />
         <entry key="..\:/Users/usuario/Desktop/gitRepositories/GreenNotes/app/src/main/res/layout/fragment_task_list.xml" value="0.33" />
-        <entry key="..\:/Users/usuario/Desktop/gitRepositories/GreenNotes/app/src/main/res/layout/fragment_task_view.xml" value="0.25" />
         <entry key="..\:/Users/usuario/Desktop/gitRepositories/GreenNotes/app/src/main/res/layout/fragment_test_recycle.xml" value="0.33" />
       </map>
     </option>
