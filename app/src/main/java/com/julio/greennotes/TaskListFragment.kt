@@ -68,7 +68,7 @@ class TaskListFragment : Fragment() {
 
         val buttonAddNewTask : ImageButton = view.findViewById(R.id.btn_add_new_task)
         val buttonProfile : ImageButton = view.findViewById(R.id.btn_profile)
-
+        val buttonSaveTheWorld : ImageButton = view.findViewById(R.id.btn_save_the_world)
 
 
 
@@ -79,6 +79,11 @@ class TaskListFragment : Fragment() {
 
         buttonProfile.setOnClickListener {
             val action = TaskListFragmentDirections.actionTaskListFragmentToProfilleFragment()
+            findNavController().navigate(action)
+        }
+
+        buttonSaveTheWorld.setOnClickListener {
+            val action = TaskListFragmentDirections.actionHomeToSaveTheWorld()
             findNavController().navigate(action)
         }
 

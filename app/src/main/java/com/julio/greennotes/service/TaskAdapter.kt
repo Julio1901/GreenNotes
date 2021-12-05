@@ -27,6 +27,7 @@ class TaskAdapter (private val context : Context, private val taskList: List<Tas
         val statusTextView : TextView = view.findViewById(R.id.editText_status)
 
         val btnEditTask : ImageButton = view.findViewById(R.id.btn_edit_task_card_view)
+        val btnTrashDeletTask : ImageButton = view.findViewById(R.id.btn_trash_delete_task)
         val myView = view
 
     }
@@ -55,7 +56,21 @@ class TaskAdapter (private val context : Context, private val taskList: List<Tas
                 //Passando argumentos para edição
                 val action = TaskListFragmentDirections.actionHomeFragmentToFormFragment(
                     item.name, item.description, item.assignetTo, item.dueDate,item.status,
-                    "EDITAR TAREFA", item.id)
+                    "                      EDITAR TAREFA", item.id)
+
+                v.findNavController().navigate(action)
+            }
+            onClick(holder.myView)
+        })
+
+        holder.btnTrashDeletTask.setOnClickListener ( View.OnClickListener {
+            fun onClick (v : View){
+
+
+                //Passando argumentos para edição
+                val action = TaskListFragmentDirections.actionHomeFragmentToFormFragment(
+                    item.name, item.description, item.assignetTo, item.dueDate,item.status,
+                    "                      EDITAR TAREFA", item.id)
 
                 v.findNavController().navigate(action)
             }

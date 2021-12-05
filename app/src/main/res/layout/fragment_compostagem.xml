@@ -7,7 +7,7 @@
     tools:context=".CompostagemFragment" >
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/imageView_back_compostagem_to_save_the_world"
         android:layout_width="383dp"
         android:layout_height="138dp"
         android:src="@drawable/compostagem_titulo"
@@ -28,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_back_compostagem_to_save_the_world" />
 
     <ScrollView
         android:layout_width="310dp"

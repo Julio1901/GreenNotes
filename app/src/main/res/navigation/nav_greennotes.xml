@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_greennotes"
-    app:startDestination="@id/compostagemFragment">
+    app:startDestination="@id/bannerFragment">
 
     <fragment
         android:id="@+id/formFragment"
@@ -53,7 +53,7 @@
             android:id="@+id/action_taskListFragment_to_profilleFragment"
             app:destination="@id/profilleFragment" />
         <action
-            android:id="@+id/action_taskListFragment_to_homeFragment"
+            android:id="@+id/action_home_to_save_the_world"
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
@@ -107,6 +107,9 @@
         <action
             android:id="@+id/action_homeFragment_to_compostagemFragment"
             app:destination="@id/compostagemFragment" />
+        <action
+            android:id="@+id/action_save_world_to_home"
+            app:destination="@id/taskListFragment" />
     </fragment>
     <fragment
         android:id="@+id/profilleFragment"
@@ -150,5 +153,9 @@
         android:id="@+id/compostagemFragment"
         android:name="com.julio.greennotes.CompostagemFragment"
         android:label="fragment_compostagem"
-        tools:layout="@layout/fragment_compostagem" />
+        tools:layout="@layout/fragment_compostagem" >
+        <action
+            android:id="@+id/action_compostagemFragment_to_save_the_world"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

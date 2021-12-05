@@ -3,6 +3,22 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--Status options array-->
+
+    <string-array name="status_options">
+        <item>Concluida</item>
+        <item>Adiada</item>
+        <item>Cancelada</item>
+    </string-array>
+
+    <!--Strings para alert dialog no momento da deleção de uma tarefa-->
+
+    <string name="cancel">Cancelar</string>
+    <string name="decline">Decline</string>
+    <string name="accept">Deletar</string>
+    <string name="cancelDialogTitle">Tem certeza que deseja deletar essa tarefa?</string>
+    <string name="cancelDialogDescription">Essa ação não pode ser desfeita</string>
+
     <!-- COMPOSTAGEM -->
 
     <string name= "titulo_compostagem">  Entenda como fazer compostagem doméstica com o reaproveitamento de resíduos</string>

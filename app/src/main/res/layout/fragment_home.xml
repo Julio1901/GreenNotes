@@ -62,7 +62,7 @@
         app:srcCompat="@drawable/dicas_salvar_o_mundo__1_" />
 
     <ImageButton
-        android:id="@+id/seta_btn_pg_5"
+        android:id="@+id/btn_back_save_world_to_home"
         android:layout_width="56dp"
         android:layout_height="46dp"
         android:background="#00FFFFFF"
@@ -76,7 +76,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/btn_go_to_compostagem"
         android:layout_width="47dp"
         android:layout_height="55dp"
         android:background="#00FFFFFF"

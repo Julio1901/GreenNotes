@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cadastro_text_view_pg_4" />
 
     <Button
-        android:id="@+id/btn_log_pg_4"
+        android:id="@+id/btn_register_new_user_in_db"
         android:layout_width="276dp"
         android:layout_height="48dp"
         android:layout_marginTop="28dp"

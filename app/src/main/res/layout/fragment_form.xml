@@ -31,17 +31,17 @@
 
         <EditText
             android:id="@+id/plainText_progress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
             android:background="@drawable/plaintext_bg_border"
             android:ems="10"
             android:hint="   Progresso"
             android:inputType="textPersonName"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintHorizontal_bias="0.875"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/plainText_date" />
+            tools:layout_editor_absoluteY="562dp" />
 
         <EditText
             android:id="@+id/plainText_task_title"
@@ -104,6 +104,7 @@
             android:id="@+id/btn_save_task"
             android:layout_width="109dp"
             android:layout_height="43dp"
+            android:layout_marginBottom="188dp"
             android:backgroundTint="@color/verdeapp"
             android:fontFamily="@font/hammersmith_one"
             android:hapticFeedbackEnabled="false"
@@ -115,8 +116,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/plainText_progress"
-            app:layout_constraintVertical_bias="0.282"
+            app:layout_constraintTop_toBottomOf="@+id/planets_spinner"
+            app:layout_constraintVertical_bias="1.0"
             app:rippleColor="#FFFFFF"
             app:strokeColor="#FFFFFF" />
 
@@ -155,6 +156,7 @@
             android:text="Excluir"
             android:textColor="#FFFFFF"
             android:textSize="15dp"
+            android:visibility="invisible"
             app:iconTint="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/textView_form_title"
             app:layout_constraintEnd_toEndOf="@+id/textView_form_title"
@@ -163,6 +165,15 @@
             app:layout_constraintTop_toTopOf="@+id/textView_form_title"
             app:layout_constraintVertical_bias="1.0"
             app:rippleColor="@color/white" />
+
+        <Spinner
+            android:id="@+id/planets_spinner"
+            android:layout_width="187dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plainText_date" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

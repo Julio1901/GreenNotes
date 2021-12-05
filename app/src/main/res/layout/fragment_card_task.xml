@@ -112,13 +112,13 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/iconlapis_pg12"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                app:layout_constraintEnd_toStartOf="@+id/btn_trash_delete_task"
                 app:layout_constraintHorizontal_bias="0.358"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText_status" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/btn_trash_delete_task"
                 android:layout_width="22dp"
                 android:layout_height="25dp"
                 android:background="#00FFFFFF"
