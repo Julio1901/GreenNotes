@@ -33,8 +33,13 @@ class TaskRepository(context: Context) {
         taskDao.deleteTaskLocal(task)
     }
 
+    suspend fun updateLocalTask(task: Task){
+        taskDao.updateRoom(task)
+    }
 
-
+    suspend fun queryById(id : Int): Flow<Task?>{
+        return taskDao.queryById(id)
+    }
 
 
     //RETROFIT
@@ -46,5 +51,13 @@ class TaskRepository(context: Context) {
         return RetrofitInstance.api.updateTask(task)
     }
 
+    suspend fun addRemoteTask(task : Task) : Response<Task>{
+        return RetrofitInstance.api.addTask(task)
+    }
+
+    suspend fun getAllRemoteTasks() : Response<List<Task>>{
+        return RetrofitInstance.api.getAllRemoteTasks()
+
+    }
 
 }

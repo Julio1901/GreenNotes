@@ -4,13 +4,17 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.julio.greennotes.R
+import com.julio.greennotes.TaskListFragmentDirections
 import com.julio.greennotes.model.Task
 
 
 class TaskAdapter (private val context : Context, private val taskList: List<Task>): RecyclerView.Adapter<TaskAdapter.MyViewHolder>(){
+
 
     //02- Recebe uma view e cria um padrão de viewHolder com base nos campos contidos na view
     class MyViewHolder(private val view : View): RecyclerView.ViewHolder(view){
@@ -20,6 +24,10 @@ class TaskAdapter (private val context : Context, private val taskList: List<Tas
         val responsibleTextView : TextView = view.findViewById(R.id.editText_responsible)
         val dateTextView : TextView = view.findViewById(R.id.editText_date)
         val statusTextView : TextView = view.findViewById(R.id.editText_status)
+
+        val btnEditTask : Button = view.findViewById(R.id.btn_edit_task_card_view)
+        val myView = view
+
     }
 
     //TODO:Substituir pelo cardView
@@ -37,6 +45,22 @@ class TaskAdapter (private val context : Context, private val taskList: List<Tas
         holder.responsibleTextView.text = item.assignetTo
         holder.dateTextView.text = item.dueDate
         holder.statusTextView.text = item.status
+
+        //colocando listner
+        holder.btnEditTask.setOnClickListener ( View.OnClickListener {
+            fun onClick (v : View){
+
+
+                //Passando argumentos para edição
+                val action = TaskListFragmentDirections.actionHomeFragmentToFormFragment(
+                    item.name, item.description, item.assignetTo, item.dueDate,item.status,
+                    "EDITAR TAREFA", item.id)
+
+                v.findNavController().navigate(action)
+            }
+            onClick(holder.myView)
+        })
+
     }
     //Retorna a quantidade de elementos para o viewHolder poder manipular de maneira eficaz quantas views irá
     //disponibilizar para nossa recycler view

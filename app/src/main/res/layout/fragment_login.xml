@@ -13,7 +13,7 @@
         android:layout_marginTop="152dp"
         android:scaleType="fitCenter"
         android:src="@drawable/jacare"
-        app:layout_constraintBottom_toTopOf="@+id/btn_login_pg_1"
+        app:layout_constraintBottom_toTopOf="@+id/btn_make_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         app:srcCompat="@drawable/jacare_cadastro" />
 
     <Button
-        android:id="@+id/btn_login_pg_1"
+        android:id="@+id/btn_make_login"
         android:layout_width="276dp"
         android:layout_height="54dp"
         android:layout_marginTop="484dp"
@@ -37,7 +37,7 @@
         app:rippleColor="#C9E3A6" />
 
     <Button
-        android:id="@+id/btn_register_pg_1"
+        android:id="@+id/btn_sing_up"
         android:layout_width="276dp"
         android:layout_height="54dp"
         android:fontFamily="@font/hammersmith_one"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login_pg_1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_make_login"
         app:layout_constraintVertical_bias="0.106"
         app:rippleColor="#C9E3A6" />
 

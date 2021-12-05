@@ -49,14 +49,14 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/profile_btn_pg_"
+        android:id="@+id/btn_profile"
         android:layout_width="63dp"
         android:layout_height="55dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         android:src="@drawable/icon_perfil"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/add_task_btn_pg_"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add_new_task"
         app:layout_constraintHorizontal_bias="0.383"
         app:layout_constraintStart_toStartOf="@+id/barra_inferior_pg_"
         app:layout_constraintTop_toTopOf="@+id/barra_inferior_pg_"
@@ -73,12 +73,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/barra_inferior_pg_"
         app:layout_constraintHorizontal_bias="0.619"
-        app:layout_constraintStart_toEndOf="@+id/add_task_btn_pg_"
+        app:layout_constraintStart_toEndOf="@+id/btn_add_new_task"
         app:layout_constraintTop_toTopOf="@+id/barra_inferior_pg_"
         app:layout_constraintVertical_bias="0.972" />
 
     <ImageButton
-        android:id="@+id/add_task_btn_pg_"
+        android:id="@+id/btn_add_new_task"
         android:layout_width="73dp"
         android:layout_height="72dp"
         android:background="#00FFFFFF"

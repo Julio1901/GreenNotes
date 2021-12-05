@@ -101,7 +101,7 @@
             app:layout_constraintTop_toBottomOf="@+id/plainText_responsible" />
 
         <Button
-            android:id="@+id/btn_save"
+            android:id="@+id/btn_save_task"
             android:layout_width="76dp"
             android:layout_height="39dp"
             android:backgroundTint="@color/cinzabtn"
@@ -120,14 +120,14 @@
             app:strokeColor="#FFFFFF" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/btn_back_to_home"
             android:layout_width="54dp"
             android:layout_height="42dp"
             android:background="#00000000"
             android:scaleType="centerCrop"
             android:src="@drawable/seta"
             app:layout_constraintBottom_toTopOf="@+id/plainText_task_title"
-            app:layout_constraintEnd_toStartOf="@+id/btn_save"
+            app:layout_constraintEnd_toStartOf="@+id/btn_save_task"
             app:layout_constraintHorizontal_bias="0.069"
             app:layout_constraintStart_toStartOf="@+id/textView_form_title"
             app:layout_constraintTop_toTopOf="parent"
@@ -146,13 +146,14 @@
             app:layout_constraintVertical_bias="0.853" />
 
         <Button
-            android:id="@+id/delete_btn_pg_13"
+            android:id="@+id/btn_delete_task"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/hammersmith_one"
             android:text="DELETAR"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:visibility="invisible"
             app:iconTint="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

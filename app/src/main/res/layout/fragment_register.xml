@@ -7,7 +7,7 @@
     tools:context=".RegisterFragment">
 
     <Button
-        android:id="@+id/btn_log_pg3"
+        android:id="@+id/btn_login_user_authentication"
         android:layout_width="209dp"
         android:layout_height="48dp"
         android:layout_marginBottom="252dp"
@@ -27,7 +27,7 @@
         android:layout_height="49dp"
         android:layout_marginBottom="68dp"
         android:src="@drawable/botao_cinza_form_pg_3"
-        app:layout_constraintBottom_toTopOf="@+id/btn_log_pg3"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login_user_authentication"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -91,7 +91,7 @@
         app:layout_constraintVertical_bias="0.294" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btn_back_to_login_fragment"
         android:layout_width="60dp"
         android:layout_height="58dp"
         android:backgroundTint="#00FFFFFF"

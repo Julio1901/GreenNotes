@@ -5,29 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageButton
+import androidx.navigation.fragment.findNavController
+import com.julio.greennotes.repository.TaskRepository
+import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.core.parameter.parametersOf
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [RegisterFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class RegisterFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+  //Fragmento onde o usuário coloca login e senha para autenticação
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    //TODO: Nesse momento, caso o usuário seja autenticado a lista deve ser carregada do remoto para o local antes de ir para a próxima fragment
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,23 +26,35 @@ class RegisterFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_register, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RegisterFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RegisterFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val taskViewModel : TaskViewModel by viewModel{
+            parametersOf(TaskRepository(view.context))
+        }
+
+        //ATUALIZA DB LOCAL ANTES DE IR PARA O FRAGMENTE ONDE O RECYCLER VIEW SERÁ EXIBIDO
+        taskViewModel.atualizarDbAoSerCriado()
+
+        val buttonAuthenticateUser : Button = view.findViewById(R.id.btn_login_user_authentication)
+        val buttonBackToLoginFragment : ImageButton = view.findViewById(R.id.btn_back_to_login_fragment)
+
+
+
+        buttonAuthenticateUser.setOnClickListener {
+            val action = RegisterFragmentDirections.actionRegisterFragmentToHomeFragment()
+            findNavController().navigate(action)
+        }
+
+        buttonBackToLoginFragment.setOnClickListener {
+            val action = RegisterFragmentDirections.actionAuthenticationFragmentToLoginFragment()
+            findNavController().navigate(action)
+        }
+
+
+
+
+
+
     }
 }

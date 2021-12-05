@@ -5,12 +5,9 @@ import retrofit2.Response
 import retrofit2.http.*
 
 interface TaskService {
-    //TODO get
-
 
     @POST("api/todo")
     suspend fun addTask(@Body task: Task): Response<Task>
-
 
     @DELETE("api/todo/{task}")
     suspend fun deletTaskById(
@@ -21,4 +18,8 @@ interface TaskService {
     suspend fun updateTask(
         @Body task: Task
     ): Response<Task>
+
+    @GET("api/todo")
+    suspend fun getAllRemoteTasks(): Response<List<Task>>
+
 }

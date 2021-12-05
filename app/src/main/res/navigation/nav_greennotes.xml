@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_greennotes"
-    app:startDestination="@id/taskListFragment">
+    app:startDestination="@id/bannerFragment">
 
     <fragment
         android:id="@+id/formFragment"
@@ -33,12 +33,26 @@
         <argument
             android:name="fragmentTitle"
             android:defaultValue="EDITAR TAREFA" />
+        <action
+            android:id="@+id/action_formFragment_to_homeFragment"
+            app:destination="@id/taskListFragment" />
+        <argument
+            android:name="taskId"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/taskListFragment"
         android:name="com.julio.greennotes.TaskListFragment"
         android:label="fragment_task_list"
-        tools:layout="@layout/fragment_task_list" />
+        tools:layout="@layout/fragment_task_list" >
+        <action
+            android:id="@+id/action_homeFragment_to_formFragment"
+            app:destination="@id/formFragment" />
+        <action
+            android:id="@+id/action_taskListFragment_to_profilleFragment"
+            app:destination="@id/profilleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/taskViewFragment"
         android:name="com.julio.greennotes.TaskViewFragment"
@@ -48,18 +62,14 @@
         android:id="@+id/greenNotes"
         android:name="com.julio.greennotes.GreenNotes"
         android:label="fragment_green_notes"
-        tools:layout="@layout/fragment_green_notes" >
-        <action
-            android:id="@+id/action_greenNotes_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_green_notes" />
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.julio.greennotes.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_registerFragment"
+            android:id="@+id/action_loginFragment_to_authenticationFragment"
             app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_loginFragment_to_signingUpFragment"
@@ -72,13 +82,20 @@
         tools:layout="@layout/fragment_register" >
         <action
             android:id="@+id/action_registerFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/taskListFragment" />
+        <action
+            android:id="@+id/action_authentication_fragment_to_login_fragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/signingUpFragment"
         android:name="com.julio.greennotes.SigningUpFragment"
         android:label="fragment_signing_up"
-        tools:layout="@layout/fragment_signing_up" />
+        tools:layout="@layout/fragment_signing_up" >
+        <action
+            android:id="@+id/action_signingUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.julio.greennotes.HomeFragment"
@@ -93,14 +110,21 @@
             android:id="@+id/action_profilleFragment_to_ajudaEFeedbackFragment"
             app:destination="@id/ajudaEFeedbackFragment" />
         <action
-            android:id="@+id/action_profilleFragment_to_loginFragment2"
+            android:id="@+id/action_profile_to_login_fragment_logoff"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_profilleFragment_to_taskListFragment"
+            app:destination="@id/taskListFragment" />
     </fragment>
     <fragment
         android:id="@+id/ajudaEFeedbackFragment"
         android:name="com.julio.greennotes.AjudaEFeedbackFragment"
         android:label="fragment_ajuda_e_feedback"
-        tools:layout="@layout/fragment_ajuda_e_feedback" />
+        tools:layout="@layout/fragment_ajuda_e_feedback" >
+        <action
+            android:id="@+id/action_ajudaEFeedbackFragment_to_profilleFragment"
+            app:destination="@id/profilleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/homeViewFragment"
         android:name="com.julio.greennotes.HomeViewFragment"
@@ -109,5 +133,14 @@
         <action
             android:id="@+id/action_homeViewFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bannerFragment"
+        android:name="com.julio.greennotes.BannerFragment"
+        android:label="fragment_banner"
+        tools:layout="@layout/fragment_banner" >
+        <action
+            android:id="@+id/action_bannerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

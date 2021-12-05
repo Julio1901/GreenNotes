@@ -7,7 +7,7 @@
     tools:context=".ProfilleFragment" >
 
     <Button
-        android:id="@+id/btn_logoff_pg_7"
+        android:id="@+id/btn_logoff"
         android:layout_width="226dp"
         android:layout_height="48dp"
         android:layout_marginEnd="56dp"
@@ -19,7 +19,7 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_ajuda_pg_7"
+        app:layout_constraintTop_toBottomOf="@+id/btn_help_and_feedback"
         app:layout_constraintVertical_bias="0.951"
         app:rippleColor="#FFFFFF" />
 
@@ -29,14 +29,14 @@
         android:layout_height="30dp"
         android:layout_marginStart="36dp"
         android:src="@drawable/icon_logoff_pg07__1_"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_logoff_pg_7"
-        app:layout_constraintEnd_toStartOf="@+id/btn_logoff_pg_7"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_logoff"
+        app:layout_constraintEnd_toStartOf="@+id/btn_logoff"
         app:layout_constraintHorizontal_bias="0.412"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_logoff_pg_7" />
+        app:layout_constraintTop_toTopOf="@+id/btn_logoff" />
 
     <Button
-        android:id="@+id/btn_ajuda_pg_7"
+        android:id="@+id/btn_help_and_feedback"
         android:layout_width="226dp"
         android:layout_height="48dp"
         android:layout_marginTop="216dp"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btn_profile_back_to_home"
         android:layout_width="49dp"
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
@@ -91,10 +91,10 @@
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         android:src="@drawable/icon_ajuda_pg07__1_"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_ajuda_pg_7"
-        app:layout_constraintEnd_toStartOf="@+id/btn_ajuda_pg_7"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_help_and_feedback"
+        app:layout_constraintEnd_toStartOf="@+id/btn_help_and_feedback"
         app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_ajuda_pg_7" />
+        app:layout_constraintTop_toTopOf="@+id/btn_help_and_feedback" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -147,7 +147,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/btn_voltar_pg_4"
+        android:id="@+id/btn_back_to_login_screen"
         android:layout_width="50dp"
         android:layout_height="49dp"
         android:backgroundTint="#00FFFFFF"

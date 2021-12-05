@@ -78,6 +78,17 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="editTextName" />
 
+            <Button
+                android:id="@+id/btn_edit_task_card_view"
+                android:layout_width="88dp"
+                android:layout_height="40dp"
+                android:text="EDIT"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="-1dp" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
