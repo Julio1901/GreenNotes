@@ -27,7 +27,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.001" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/plainText_progress"
@@ -102,21 +102,22 @@
 
         <Button
             android:id="@+id/btn_save_task"
-            android:layout_width="76dp"
-            android:layout_height="39dp"
-            android:backgroundTint="@color/cinzabtn"
+            android:layout_width="109dp"
+            android:layout_height="43dp"
+            android:backgroundTint="@color/verdeapp"
+            android:fontFamily="@font/hammersmith_one"
             android:hapticFeedbackEnabled="false"
             android:text="Salvar"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="13sp"
+            android:textSize="20sp"
             app:iconTint="#545454"
-            app:layout_constraintBottom_toBottomOf="@+id/textView_form_title"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.85"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:rippleColor="#D9D9D9"
+            app:layout_constraintTop_toBottomOf="@+id/plainText_progress"
+            app:layout_constraintVertical_bias="0.282"
+            app:rippleColor="#FFFFFF"
             app:strokeColor="#FFFFFF" />
 
         <ImageButton
@@ -147,20 +148,20 @@
 
         <Button
             android:id="@+id/btn_delete_task"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="101dp"
+            android:layout_height="42dp"
+            android:backgroundTint="#C90303"
             android:fontFamily="@font/hammersmith_one"
-            android:text="DELETAR"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:visibility="invisible"
+            android:text="Excluir"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
             app:iconTint="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/plainText_progress"
-            app:layout_constraintVertical_bias="0.164"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_form_title"
+            app:layout_constraintEnd_toEndOf="@+id/textView_form_title"
+            app:layout_constraintHorizontal_bias="0.948"
+            app:layout_constraintStart_toStartOf="@+id/textView_form_title"
+            app:layout_constraintTop_toTopOf="@+id/textView_form_title"
+            app:layout_constraintVertical_bias="1.0"
             app:rippleColor="@color/white" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

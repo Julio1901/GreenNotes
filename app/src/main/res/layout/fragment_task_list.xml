@@ -7,45 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".TaskListFragment">
 
-    <ImageButton
-        android:id="@+id/imageButton10"
-        android:layout_width="376dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="136dp"
-        android:background="#00FFFFFF"
-        android:scaleType="fitXY"
-        android:src="@drawable/barra_ods_menu"
-        app:layout_constraintBottom_toTopOf="@+id/barra_inferior_pg_5"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_oficial"
+        android:layout_width="411dp"
+        android:layout_height="351dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:clipToPadding="false"
+        android:foregroundGravity="center"
+        android:paddingRight="50dp"
+        android:scrollbars="vertical"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/barra_inferior_pg_"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.359" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:layout_constraintVertical_bias="0.391">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="244dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="76dp"
-        android:fontFamily="@font/hammersmith_one"
-        android:gravity="center"
-        android:text="Salve o Mundo"
-        android:textColor="@color/verdeapp"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+    </androidx.recyclerview.widget.RecyclerView>
 
     <TextView
         android:id="@+id/barra_inferior_pg_"
-        android:layout_width="411dp"
-        android:layout_height="124dp"
-        android:background="@color/verdeapp"
+        android:layout_width="414dp"
+        android:layout_height="110dp"
+        android:background="@drawable/barra_inferior_home_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
@@ -55,27 +44,24 @@
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         android:src="@drawable/icon_perfil"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_inferior_pg_"
         app:layout_constraintEnd_toStartOf="@+id/btn_add_new_task"
         app:layout_constraintHorizontal_bias="0.383"
         app:layout_constraintStart_toStartOf="@+id/barra_inferior_pg_"
-        app:layout_constraintTop_toTopOf="@+id/barra_inferior_pg_"
-        app:layout_constraintVertical_bias="0.521" />
+        app:layout_constraintTop_toTopOf="@+id/barra_inferior_pg_" />
 
     <ImageButton
         android:id="@+id/calendar_btn_pg_"
         android:layout_width="63dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="32dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         android:src="@drawable/icon_calendar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_inferior_pg_"
         app:layout_constraintEnd_toEndOf="@+id/barra_inferior_pg_"
         app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toEndOf="@+id/btn_add_new_task"
-        app:layout_constraintTop_toTopOf="@+id/barra_inferior_pg_"
-        app:layout_constraintVertical_bias="0.972" />
+        app:layout_constraintTop_toTopOf="@+id/barra_inferior_pg_" />
 
     <ImageButton
         android:id="@+id/btn_add_new_task"
@@ -84,30 +70,72 @@
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         android:src="@drawable/icon_plus"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_inferior_pg_"
         app:layout_constraintEnd_toEndOf="@+id/barra_inferior_pg_"
         app:layout_constraintStart_toStartOf="@+id/barra_inferior_pg_"
-        app:layout_constraintTop_toTopOf="@+id/barra_inferior_pg_"
-        app:layout_constraintVertical_bias="0.365" />
+        app:layout_constraintTop_toTopOf="@+id/barra_inferior_pg_" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_oficial"
-        android:layout_width="410dp"
-        android:layout_height="287dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        android:paddingLeft="150dp"
-        android:scrollbars="vertical"
-        app:layoutManager="LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="221dp"
+        android:layout_height="35dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/greennotessingle__1_"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_inferior_pg_"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.721">
+        app:layout_constraintVertical_bias="0.04"
+        app:srcCompat="@drawable/greennotescortado" />
 
-    </androidx.recyclerview.widget.RecyclerView>
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="399dp"
+        android:layout_height="126dp"
+        android:src="@drawable/dicas_salvar_o_mundo"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_inferior_pg_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.191" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="47dp"
+        android:layout_height="55dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_seta2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/imageView16"
+        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="19dp"
+        android:layout_height="16dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/icon_instagram"
+        app:layout_constraintBottom_toTopOf="@+id/imageView16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GreenNotes_app"
+        android:textColor="#333438"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView17"
+        app:layout_constraintTop_toTopOf="@+id/imageView17" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CardTaskFragment" >
+    android:background="#00FFFFFF"
+    android:backgroundTint="#00FFFFFF"
+    tools:context=".CardTaskFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_formTask"
@@ -16,78 +18,117 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="262dp"
+            android:layout_height="271dp"
+            android:background="@drawable/card_view_bg_border"
+            android:backgroundTint="@color/cinzabtn">
 
             <EditText
                 android:id="@+id/editText_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/plaintext_bg_border"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:textColor="@color/cinzabtn"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText_date"
-                tools:text="Status" />
+                app:layout_constraintVertical_bias="0.0"
+                tools:text=" Status" />
 
             <EditText
                 android:id="@+id/editText_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/plaintext_bg_border"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:textColor="@color/cinzabtn"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText_responsible"
-                tools:text="Date" />
+                tools:text=" Date" />
 
             <EditText
                 android:id="@+id/editText_responsible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/plaintext_bg_border"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:textColor="@color/cinzabtn"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText_details"
-                tools:text="Responsible" />
+                tools:text=" Responsible" />
 
             <EditText
                 android:id="@+id/editText_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/plaintext_bg_border"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:textColor="@color/cinzabtn"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText_name"
-                tools:text="Details" />
+                tools:text=" Details" />
 
             <EditText
                 android:id="@+id/editText_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_width="184dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#00FFFFFF"
                 android:ems="10"
+                android:fontFamily="@font/hammersmith_one"
                 android:inputType="textPersonName"
+                android:singleLine="false"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorHint="#FFFFFF"
+                android:textSize="28dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="editTextName" />
+                app:layout_constraintVertical_bias="0.056"
+                tools:text="TaxkName" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn_edit_task_card_view"
-                android:layout_width="88dp"
-                android:layout_height="40dp"
-                android:text="EDIT"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                android:layout_width="22dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="88dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/iconlapis_pg12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                app:layout_constraintHorizontal_bias="0.358"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="-1dp" />
+                app:layout_constraintTop_toBottomOf="@+id/editText_status" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="22dp"
+                android:layout_height="25dp"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_trash_3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.587"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_status" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

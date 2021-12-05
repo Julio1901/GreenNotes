@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_greennotes"
-    app:startDestination="@id/bannerFragment">
+    app:startDestination="@id/compostagemFragment">
 
     <fragment
         android:id="@+id/formFragment"
@@ -52,6 +52,9 @@
         <action
             android:id="@+id/action_taskListFragment_to_profilleFragment"
             app:destination="@id/profilleFragment" />
+        <action
+            android:id="@+id/action_taskListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/taskViewFragment"
@@ -100,7 +103,11 @@
         android:id="@+id/homeFragment"
         android:name="com.julio.greennotes.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_compostagemFragment"
+            app:destination="@id/compostagemFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profilleFragment"
         android:name="com.julio.greennotes.ProfilleFragment"
@@ -129,11 +136,7 @@
         android:id="@+id/homeViewFragment"
         android:name="com.julio.greennotes.HomeViewFragment"
         android:label="fragment_home_view"
-        tools:layout="@layout/fragment_home_view" >
-        <action
-            android:id="@+id/action_homeViewFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_home_view" />
     <fragment
         android:id="@+id/bannerFragment"
         android:name="com.julio.greennotes.BannerFragment"
@@ -143,4 +146,9 @@
             android:id="@+id/action_bannerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/compostagemFragment"
+        android:name="com.julio.greennotes.CompostagemFragment"
+        android:label="fragment_compostagem"
+        tools:layout="@layout/fragment_compostagem" />
 </navigation>
