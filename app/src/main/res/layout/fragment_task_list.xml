@@ -7,6 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".TaskListFragment">
 
+    <TextView
+        android:id="@+id/barra_inferior_pg_"
+        android:layout_width="414dp"
+        android:layout_height="110dp"
+        android:background="@drawable/barra_inferior_home_border"
+        android:paddingVertical="0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_oficial"
         android:layout_width="411dp"
@@ -26,16 +37,6 @@
         app:layout_constraintVertical_bias="0.391">
 
     </androidx.recyclerview.widget.RecyclerView>
-
-    <TextView
-        android:id="@+id/barra_inferior_pg_"
-        android:layout_width="414dp"
-        android:layout_height="110dp"
-        android:background="@drawable/barra_inferior_home_border"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/btn_profile"

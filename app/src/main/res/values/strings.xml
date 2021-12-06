@@ -21,22 +21,32 @@
 
     <!-- COMPOSTAGEM -->
 
-    <string name= "titulo_compostagem">  Entenda como fazer compostagem doméstica com o reaproveitamento de resíduos</string>
+    <string name="titulo_compostagem">Entenda como fazer compostagem doméstica.</string>
 
-    <string name=  "texto_compostagem">1- <b>Separe</b> 3 caixas plásticas escuras (sendo uma com tampa), folhas secas, galhos pequenos ou serragem sem produtos como verniz
+    <string name="subtitulo_compostagem">confira o passo a passo:</string>
 
-2- Empilhe as caixas em três níveis. Nas duas caixas superiores será feita a compostagem e por isso elas devem ter pequenos furos, que farão a “comunicação” entre as caixas. A caixa inferior servirá apenas para a coleta do resíduo líquido orgânico.
+    <string name="texto_compostagem">1- <b>Separe</b> 3 caixas plásticas escuras (sendo uma com tampa), folhas secas,
+        galhos pequenos ou serragem sem produtos como verniz.
 
-3- Forre o fundo da caixa superior com folhas secas, pequenos galhos ou serragem. Essa camada funciona como “dreno” para a composteira.
+        <p><br>2- <b>Empilhe as caixas</b> em três níveis. Nas duas caixas superiores será feita a compostagem e por isso elas devem ter pequenos
+            furos, que farão a “comunicação” entre as caixas. A caixa inferior servirá apenas para a coleta do resíduo líquido orgânico.</br></p>
 
-Posteriormente, aplique os resíduos orgânicos.
-Cubra os resíduos com outra camada de folhas secas/serragem para contribuir com a oxigenação.
+        <p><br>3- <b>Forre o fundo</b> da caixa superior com folhas secas, pequenos galhos ou serragem. Essa camada funciona como “dreno” para a composteira.</br></p>
+        <br><i>Posteriormente, aplique os resíduos orgânicos.
+            Cubra os resíduos com outra camada de folhas secas ou serragem para contribuir com a oxigenação.</i></br>
 
-4- Cubra os resíduos com outra camada de folhas secas ou serragem para contribuir com a oxigenação e evitar insetos como moscas.
+        <p><br>4- <b>Cubra os resíduos</b> com outra camada de folhas secas ou serragem para contribuir com a oxigenação e evitar insetos como moscas.</br></p>
 
-5- Feche a caixa e aguarde. Durante os dias seguintes, faça depósitos diários de resíduos até que ela seja preenchida. Assim que estiver completa, basta colocar essa caixa para baixo e subir uma vazia para recomeçar o processo.
+        <p><br>5- <b>Feche a caixa</b> e aguarde. Durante os dias seguintes, faça depósitos diários de resíduos até que ela seja preenchida.
+            Assim que estiver completa, basta colocar essa caixa para baixo e subir uma vazia para recomeçar o processo.</br></p>
 
-Depois de aproximadamente três meses já é possível utilizar o adubo. Na última caixa, ficará acumulado o resíduo líquido orgânico que, diluído em um copo de chorume e dez copos de agua, pode ser usado para regar plantas e hortas.
-Gostou de entender melhor a compostagem doméstica e de saber como fazer? Se esse artigo foi relevante para você, não deixe de acessar a nossa aba ebooks!</string>
+        <p><br>Depois de aproximadamente três meses já é possível utilizar o adubo. Na última caixa, ficará acumulado o resíduo
+            líquido orgânico que, diluído, pode ser usado para regar plantas e hortas. Indicamos diluir um copo de liquido organico em dez copos de agua</br></p>
+
+        <p><br><i>Gostou de entender melhor a compostagem doméstica e de saber como fazer? Se esse artigo foi relevante para você,
+            não deixe de conferir as outras dicas que nós temos!</i></br></p>
+
+    </string>
+
 
 </resources>

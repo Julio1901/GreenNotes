@@ -17,29 +17,42 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="349dp"
-        android:layout_height="84dp"
+        android:layout_width="352dp"
+        android:layout_height="70dp"
         android:layout_marginTop="28dp"
         android:text="@string/titulo_compostagem"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/cinzabtn"
-        android:textSize="20dp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_back_compostagem_to_save_the_world" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="350dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="1dp"
+        android:gravity="top"
+        android:text="@string/subtitulo_compostagem"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
     <ScrollView
-        android:layout_width="310dp"
-        android:layout_height="443dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="350dp"
+        android:layout_height="452dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="1.0">
-
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
 
         <LinearLayout
@@ -54,8 +67,7 @@
                 android:text="@string/texto_compostagem"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/cinzabtn"
-                android:textSize="20dp">
-            </TextView>
+                android:textSize="20dp" />
 
         </LinearLayout>
 
