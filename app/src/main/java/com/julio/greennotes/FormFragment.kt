@@ -21,16 +21,6 @@ import java.time.ZoneOffset
 
 class FormFragment : Fragment() {
 
-//Fragment onde adicionamos ou editamos uma tarefa
-
-
-
-
-//
-//    private val taskViewModel : TaskViewModel by viewModel{
-//        parametersOf(TaskRepository())
- //  }
-
 
     private val args : FormFragmentArgs by navArgs()
 
@@ -57,8 +47,6 @@ class FormFragment : Fragment() {
         val plainTextProgress = view.findViewById<EditText>(R.id.plainText_progress)
         val buttonBackToHome : ImageButton = view.findViewById(R.id.btn_back_to_home)
 
-
-        //TODO fazer validação com "deseja mesmo sair" caso tenha sido chamado pela alteração conforme Milani pediu
         buttonBackToHome.setOnClickListener {
             val action = FormFragmentDirections.actionFormFragmentToHomeFragment()
             findNavController().navigate(action)
@@ -78,15 +66,6 @@ class FormFragment : Fragment() {
             spinner.adapter = adapter
         }
 
-
-
-
-        //TODO: DELETAR ISSO É APENAS UM TEST
-//        val taskToDelet = Task(17, "tedt dao", "test dao", "test dao", "2021-12-24 10:12:00", "test dao ")
-//        taskViewModel.deletTaskLocal(taskToDelet)
-
-
-        //TODO: Refactor to open with one click
         //Calendary
         plainTextDate.setOnClickListener {
             val selecionadorDeData = MaterialDatePicker
@@ -134,7 +113,6 @@ class FormFragment : Fragment() {
 
             btnDeletTask.setOnClickListener {
 
-                //TESTANDO DIÁLOGO PARA CONFIRMAR DELEÇAO
 
                 MaterialAlertDialogBuilder(view.context)
                     .setTitle(resources.getString(R.string.cancelDialogTitle))
@@ -146,10 +124,6 @@ class FormFragment : Fragment() {
                         val taskToDelet = Task(args.taskId, args.fragmentTitle, args.taskDetail, args.taskResponsible,
                             args.taskDate, args.taskProgress)
 
-                        //Deleta task criada com valores recuperados do cardView atual
-                        //taskViewModel.deletTaskLocal(taskToDelet)
-
-                        //MUDANDO DELEÇÃO AQUI
                         taskViewModel.deletTask(taskToDelet)
 
 
@@ -158,8 +132,6 @@ class FormFragment : Fragment() {
                         * não irá aparecer na lista por delay na deleção do DB local
                         * */
                         taskViewModel.atualizaRecyclerView()
-
-
 
                         //navega de volta para a lista com as tasks que constam no banco
                         val action = FormFragmentDirections.actionFormFragmentToHomeFragment()
@@ -185,32 +157,17 @@ class FormFragment : Fragment() {
                 val title = plainTextTitle.text.toString()
                 val details = plainTextDetails.text.toString()
                 val responsible = plainTextResponsible.text.toString()
-                //val formatedData = plainTextDate.text.toString()
                 //PEGA A DATA DO BANCO DE DADOS DO JEITO QUE FOI SALVA E NÃO DO JEITO QUE FOI MOSTRADA AO USUÁRIO
                 val formatedData = args.taskDate
-
-                //FORMATANDO NO PADRÃO QUE O RETROFIT EXIGE COM UMA FAKE DATE
-
-
                 val progress = plainTextProgress.text.toString()
 
                 //IMPLEMENTANDO SPINNER
                 val progressSpinner = spinner.getSelectedItem().toString()
                 val taskToUpdate = Task(args.taskId,title, details, responsible, formatedData, progressSpinner)
-                //taskViewModel.updateTaskLocal(taskToUpdate)
-
-
-
-
-                //TESTANDO UPDATE SINCRONO
 
                 taskViewModel.updateTask(taskToUpdate)
 
-
                 val action = FormFragmentDirections.actionFormFragmentToHomeFragment()
-
-                // taskViewModel.atualizarDbAoSerCriado()
-
                 findNavController().navigate(action)
 
             }
@@ -239,22 +196,14 @@ class FormFragment : Fragment() {
                     //TODO: Refactor this to generate auto id
                     val newTask = Task(0,title,details,responsible,formatedDataToRetrofit,progressSpinner)
 
-
                     //Adiciona task local e remotamente
                     taskViewModel.addTask(newTask)
-
-                    //Se eu tiro esse e faço pela model ele não aparece na lista na mesma hora
-                    //  taskViewModel.addTaskInDb(newTask)
 
                     val action = FormFragmentDirections.actionFormFragmentToHomeFragment()
                     findNavController().navigate(action)
 
                     //mock task
                     val fakeTask = Task(3,title,details,responsible,formatedData,progress)
-                    //taskViewModel.deletTaskRemote(fakeTask)
-
-
-                    //taskViewModel.deletTaskRemote(fakeTask)
                 }
             }
         }

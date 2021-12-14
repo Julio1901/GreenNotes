@@ -14,9 +14,6 @@ import org.koin.core.parameter.parametersOf
 
 
 class RegisterFragment : Fragment() {
-  //Fragmento onde o usuário coloca login e senha para autenticação
-
-    //TODO: Nesse momento, caso o usuário seja autenticado a lista deve ser carregada do remoto para o local antes de ir para a próxima fragment
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,10 +47,6 @@ class RegisterFragment : Fragment() {
             val action = RegisterFragmentDirections.actionAuthenticationFragmentToLoginFragment()
             findNavController().navigate(action)
         }
-
-
-
-
 
 
     }

@@ -11,9 +11,6 @@ import androidx.navigation.fragment.findNavController
 
 class LoginFragment : Fragment() {
 
-//FRAGMENTO COM A PERGUNTA "VOCÊ TEM CADASTRO?" PARA LOGAR OU FAZER CONTA
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

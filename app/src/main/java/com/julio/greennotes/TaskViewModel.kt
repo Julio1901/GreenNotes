@@ -15,21 +15,9 @@ import kotlinx.coroutines.launch
 
 class TaskViewModel (private val taskRepository: TaskRepository) : ViewModel(){
 
-
-
-    //TODO: pegar uma tarefa no banco pelo nome ou id
-
-
-
     val localTasksListLiveDate : MutableLiveData<List<Task>> = MutableLiveData()
-
     var listResponse = mutableListOf<Task>()
-
-
-
-
     lateinit var myQueryResponse: Flow<List<Task>>
-
 
     init {
         viewModelScope.launch {
@@ -37,16 +25,6 @@ class TaskViewModel (private val taskRepository: TaskRepository) : ViewModel(){
         }
     }
 
-    //Flow here
-//    fun getTaskListLocal(){
-//        taskRepository.getAllLocalTasks().collect(listResponse ->)
-//    }
-
-
-
-    //aqui fazedos as funções inserindo no remoto e no local
-    //Lembrete: Não pode colocar  no mesmo viewScope se não ele não atualiza automaticamente
-    //A list assim que a task é inserida
     fun addTask(newTask : Task){
         viewModelScope.launch {
             try {
@@ -63,33 +41,18 @@ class TaskViewModel (private val taskRepository: TaskRepository) : ViewModel(){
 
     }
 
-
-//    fun addTaskInDb(newTask: Task){
-//        viewModelScope.launch {
-//            taskRepository.addTaskInDb(newTask)
-//        }
-//    }
-
-
-
-    /* Para essa deleção simultanea funcionar eu tenho que garantir que
-    as tasks remotas são atualizadas quando o db é criado. Do contráro eu inrido
-    uma tarefa com um id 1 local e remoto ela sobe com id 60, por exemplo
-    *
-    *
-    * */
     fun deletTask(task: Task){
 
-        //delet in retrofit api
+        //delete in retrofit api
         viewModelScope.launch {
             try {
                 taskRepository.deletTaskRemote(task.id)
             }catch (e : Exception){
-                //log error hehe
+
             }
 
         }
-        //delet in local db
+        //delete in local db
         viewModelScope.launch {
             taskRepository.deletLocalTask(task)
         }
@@ -98,30 +61,13 @@ class TaskViewModel (private val taskRepository: TaskRepository) : ViewModel(){
     }
 
 
-
-//    fun deletTaskRemote(task: Task){
-//        viewModelScope.launch {
-//            taskRepository.deletTaskRemote(task.id)
-//        }
-//    }
-//
-//
-//    fun deletTaskLocal(task: Task){
-//        viewModelScope.launch {
-//            taskRepository.deletLocalTask(task)
-//        }
-//    }
-
-
-
     fun updateTask(task : Task){
 
         viewModelScope.launch {
             try {
                 taskRepository.updateRemoteTask(task)
             }catch (e : Exception){
-                // taskRepository.updateLocalTask(task)
-                //log error here
+
             }
         }
 
@@ -132,32 +78,11 @@ class TaskViewModel (private val taskRepository: TaskRepository) : ViewModel(){
 
 
         //atualizando response para exibir na recycler view a alteração feita
-        //TODO: Verificar se é necessário
         viewModelScope.launch {
             myQueryResponse = taskRepository.getAllLocalTasks()
         }
 
-//        viewModelScope.launch {
-//            taskRepository.updateLocalTask(task)
-//        }
-
     }
-
-
-//    fun updateTaskLocal(task: Task){
-//        viewModelScope.launch {
-//            taskRepository.updateLocalTask(task)
-//        }
-//    }
-//
-//
-//    fun updateRemoteTask(task: Task){
-//        viewModelScope.launch {
-//            taskRepository.updateRemoteTask(task)
-//        }
-//    }
-
-    //FAZER FUNÇÃO PARA ATUALIZAR O LOCAL COM O REMOTO AQUI
 
     val task1 = Task(1,"NOVA RECICLER VIEW", "Teste1", "Test1", "Test1", "Test1")
     val task2 = Task(2, "Teste2", "Teste2", "Test2", "Test2", "Test2")
@@ -179,7 +104,6 @@ class TaskViewModel (private val taskRepository: TaskRepository) : ViewModel(){
                 listResponse.add(task)
             }
         }
-
 
         this.listResponse = listResponse
 
